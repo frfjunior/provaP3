@@ -1,0 +1,15 @@
+<h1>Lotes</h1>
+<ul>
+{% for lote in lotes %}
+  <li>
+    <a href="{% url 'detalhe' lote.id %}">{{ lote.variedade }}</a>
+    - produtor: {{ lote.produtor.nome }}
+    - caixas: {{ lote.caixas }}
+    - preco: {{ lote.preco_caixa }}
+    - total: {{ lote.total }}
+  </li>
+{% empty %}
+  <li>Nenhum lote disponivel.</li>
+{% endfor %}
+</ul>
+<a href="{% url 'novo_lote' %}">Novo lote</a>

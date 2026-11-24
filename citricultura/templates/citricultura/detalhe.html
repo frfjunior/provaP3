@@ -1,0 +1,7 @@
+<h1>{{ lote.variedade }}</h1>
+<p>produtor: {{ lote.produtor.nome }}</p>
+<p>caixas: {{ lote.caixas }}</p>
+<p>preco_caixa: {{ lote.preco_caixa }}</p>
+<p>data: {{ lote.data }}</p>
+<p>total: {{ lote.total }}</p>
+<a href="{% url 'lista_lotes' %}">Voltar</a>
